@@ -1,0 +1,27 @@
+/* Our most popular games */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-container a {
+  display: block;
+  text-decoration: none;
+}
+
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+.category-image {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
