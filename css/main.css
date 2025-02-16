@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Our most popular games */
 .category-container {
   display: flex;
@@ -5,6 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 100px;
 }
 
 .category-container img {
@@ -12,4 +27,14 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+body {
+  padding-top: 50px; /* Prevent content from being hidden behind navbar */
 }
