@@ -52,6 +52,13 @@ nav {
   z-index: 1000;
 }
 body {
+  background-image: url("/img/wallpaper.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding-top: 50px;
 }
 
