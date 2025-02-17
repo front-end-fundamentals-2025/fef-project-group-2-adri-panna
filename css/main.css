@@ -13,19 +13,35 @@ main {
 }
 
 /* Our most popular games */
-.category-container {
+.popular-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 20px;
 }
 
-.category-container img {
+.popular-container img {
   margin: 10px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.free-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.free-container img {
+  margin: 10px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -36,5 +52,45 @@ nav {
   z-index: 1000;
 }
 body {
-  padding-top: 50px; 
+  padding-top: 50px;
+}
+
+.navbar {
+  background-color: #222;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ====== Footer Styling ====== */
+footer {
+  width: 100%; /* Ensure the footer spans the full width */
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.8); /* Adjust color visibility */
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+}
+
+.footer a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
 }
