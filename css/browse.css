@@ -1,0 +1,18 @@
+.browse-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.browse-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
