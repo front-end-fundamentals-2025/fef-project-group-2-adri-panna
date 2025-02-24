@@ -32,15 +32,70 @@
     </header>
 
     <main>
-      <h1>Detroit: Become Human</h1>
-      <div class="detailed-container">
-        <img
-          id="detroit-detailed-1"
-          src="img/detroit-detailed-1.jpg"
-          alt="Detroit: Become Human"
-        />
-        <p>Details about the game...</p>
+      <div class="product-details">
+        <div class="title-price-container">
+          <h1>Detroit: Become Human</h1>
+          <h1 id="price">430 SEK</h1>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel">
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+          <div class="carousel-inner">
+            <!-- Image Slides -->
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-1.jpg" alt="Game Screenshot 1" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-2.jpg" alt="Game Screenshot 2" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-3.jpg" alt="Game Screenshot 3" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-4.jpg" alt="Game Screenshot 4" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-5.jpg" alt="Game Screenshot 5" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-6.jpg" alt="Game Screenshot 6" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-7.jpg" alt="Game Screenshot 7" />
+            </div>
+
+            <div class="carousel-item">
+              <img src="img/detroit-detailed-8.jpg" alt="Game Screenshot 8" />
+            </div>
+
+            <!-- Video Slide -->
+            <div class="carousel-item">
+              <iframe
+                width="1480"
+                height="677"
+                src="https://www.youtube.com/embed/8a-EObAhYrg"
+                title="Detroit: Become Human Launch Trailer | PS4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
       </div>
+
+      <script src="js/detailed-page.js"></script>
     </main>
 
     <footer>

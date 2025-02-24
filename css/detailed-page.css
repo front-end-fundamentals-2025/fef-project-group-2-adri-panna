@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
@@ -86,27 +87,14 @@ main {
   padding: 20px;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-.detailed-container {
+.title-price-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
+  justify-content: space-between;
   width: 100%;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
-#detroit-detailed-1 {
-  width: 100%;
-  max-width: 1000px; /* Set a maximum width */
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 20px;
+#price {
+  margin-left: auto;
 }
 
 /* Footer Styling */
@@ -124,4 +112,73 @@ footer {
   color: #00bcd4;
   text-decoration: none;
   font-weight: bold;
+}
+
+.product-details {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);*/
+  background: transparent;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.carousel-item iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
