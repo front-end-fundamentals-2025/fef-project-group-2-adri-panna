@@ -18,8 +18,96 @@
           </div>
         </ul>
       </nav>
+      <nav class="navbar bottom-navbar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="browse.html">BROWSE</a></li>
+          <li><a href="discounts.html">DISCOUNTS</a></li>
+          <li><a href="support.html">SUPPORT</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for games..." />
+        <button type="submit">Search</button>
+      </div>
+
+      <div id="genres-text">
+        <h1>Genres</h1>
+      </div>
+      <div class="carousel-container">
+        <button class="carousel-button left" onclick="scrollCarousel(-1)">
+          &#10094;
+        </button>
+        <div class="carousel">
+          <img class="carousel-image" src="img/game-zelda.jpg" alt="Zelda" />
+          <img
+            class="carousel-image"
+            src="img/game-cyberpunk.jpg"
+            alt="Cyberpunk"
+          />
+          <img class="carousel-image" src="img/game-avatar.jpg" alt="Avatar" />
+          <img
+            class="carousel-image"
+            src="img/game-fortnite.jpg"
+            alt="Fortnite"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-quarry.jpg"
+            alt="The Quarry"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-hogwarts.jpg"
+            alt="Hogwarts"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-redemption.jpg"
+            alt="Red Dead Redemption"
+          />
+          <img class="carousel-image" src="img/game-pubg.jpg" alt="PUBG" />
+          <img
+            class="carousel-image"
+            src="img/game-fall-guys.jpg"
+            alt="Fall Guys"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-gta-vice-city.jpg"
+            alt="Vice City"
+          />
+          <img class="carousel-image" src="img/game-forma1.jpg" alt="Forma 1" />
+          <img
+            class="carousel-image"
+            src="img/game-detroit.jpg"
+            alt="Detroit"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-quarry.jpg"
+            alt="The Quarry"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-last-of-us.jpg"
+            alt="The Last of Us"
+          />
+          <img
+            class="carousel-image"
+            src="img/game-stardew-valley.jpg"
+            alt="Stardew Valley"
+          />
+        </div>
+        <button class="carousel-button right" onclick="scrollCarousel(1)">
+          &#10095;
+        </button>
+      </div>
+
       <div class="browse-container">
         <img src="img/game-zelda.jpg" alt="Zelda" />
         <img src="img/game-cyberpunk.jpg" alt="Cyberpunk" />
@@ -66,5 +154,7 @@
         <a href="https://discord.com" target="_blank">Discord</a>
       </p>
     </footer>
+
+    <script src="js/browse.js"></script>
   </body>
 </html>

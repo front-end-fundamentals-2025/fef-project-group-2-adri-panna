@@ -4,32 +4,47 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+  background-image: url("/img/wallpaper.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-nav {
-  position: fixed;
-  top: 0;
+header {
   width: 100%;
   z-index: 1000;
-  background-color: #000;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar {
-  background-color: #000;
   padding: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-navbar {
+  background-color: #111;
+}
+
+.bottom-navbar {
+  padding-top: 2.5%;
+  justify-content: center;
 }
 
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .navbar ul li {
-  display: inline;
   margin: 0 15px;
 }
 
@@ -39,15 +54,169 @@ nav {
   font-size: 18px;
 }
 
+#logo {
+  flex-grow: 1;
+  text-align: center;
+  padding-left: 10%;
+}
+
+.right-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.top-navbar ul {
+  justify-content: center;
+}
+
+.top-navbar .right-nav {
+  margin-left: auto;
+}
+
+.bottom-navbar ul {
+  justify-content: center;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 80%;
+}
+
+.search-bar button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-bar button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Carousel styles */
+.carousel-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Adjust the max-width to make the carousel bigger */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 10px; /* Add gap between elements */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  flex: 0 0 23%; /* Adjust the width to fit 4 images with gaps */
+  max-width: 23%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Filters box */
+.filters-box {
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.filters-box h2 {
+  margin-bottom: 20px;
+}
+
+.filters-box label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filters-box input[type="checkbox"] {
+  margin-right: 10px;
+}
+
 .browse-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
   gap: 10px;
   width: 100%;
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .browse-container img {
