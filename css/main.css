@@ -5,13 +5,14 @@
 }
 
 body {
-  background-image: url("/img/wallpaper.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #06061c, #2d033b, #6a0572, #06061c);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
 header {
@@ -179,4 +180,16 @@ footer {
   color: #00bcd4;
   text-decoration: none;
   font-weight: bold;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
