@@ -6,6 +6,10 @@
 }
 
 body {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   background-image: url("/img/wallpaper.PNG");
   background-size: cover;
   background-position: center;

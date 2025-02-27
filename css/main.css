@@ -5,6 +5,10 @@
 }
 
 body {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
