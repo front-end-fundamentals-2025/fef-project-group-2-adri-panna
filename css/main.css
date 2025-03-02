@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 body {
@@ -71,12 +72,13 @@ header {
   margin-left: auto;
 }
 
-.top-navbar ul {
-  justify-content: center;
+.right-nav li {
+  margin-left: 15px;
 }
 
-.top-navbar .right-nav {
-  margin-left: auto;
+.nav-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .banner-container {
