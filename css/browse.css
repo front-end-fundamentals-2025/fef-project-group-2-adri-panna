@@ -16,6 +16,11 @@ body {
   animation: gradientAnimation 15s ease infinite;
 }
 
+h1 {
+  font-size: 80px;
+  color: #ffffff;
+}
+
 header {
   width: 100%;
   z-index: 1000;
@@ -210,25 +215,54 @@ header {
   margin-right: 10px;
 }
 
+/* Browse Games */
 .browse-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto);
-  gap: 10px;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.browse-container .game-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 230px;
 }
 
 .browse-container img {
-  display: block;
-  width: 100%;
-  height: auto;
+  margin: 0%;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
-  margin: 0;
-  padding: 0;
+}
+
+.browse-container .price {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.browse-container .buy-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: auto;
+  max-width: 170px;
+}
+
+.browse-container .buy-button:hover {
+  background-color: #ff0000;
 }
 
 footer {
