@@ -73,16 +73,13 @@ header {
   margin-left: auto;
 }
 
-.top-navbar ul {
-  justify-content: center;
+.right-nav li {
+  margin-left: 15px;
 }
 
-.top-navbar .right-nav {
-  margin-left: auto;
-}
-
-.bottom-navbar ul {
-  justify-content: center;
+.nav-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* Search bar */
@@ -231,7 +228,7 @@ header {
   padding: 10px;
   flex-direction: column;
   justify-content: flex-start;
-  width: 230px;
+  width: 200px;
 }
 
 .browse-container img {
@@ -242,13 +239,14 @@ header {
 }
 
 .browse-container .price {
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .browse-container .buy-button {
-  margin-top: 10px;
+  margin-bottom: 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
