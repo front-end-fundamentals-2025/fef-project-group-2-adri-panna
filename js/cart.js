@@ -51,13 +51,19 @@ function addToCart(gameName, price, imageSrc) {
 function displayCartItems() {
   const cartItems = getCartFromLocalStorage();
   const cartItemsList = document.getElementById("cart-items");
+  const totalPriceElement = document.getElementById("total-price");
+  const priceSumElement = document.querySelector(".price-sum");
   cartItemsList.innerHTML = ""; // Clear the current list
+
+  let totalPrice = 0;
 
   if (cartItems.length === 0) {
     const emptyMessage = document.createElement("li");
     emptyMessage.textContent = "Your cart is empty.";
     cartItemsList.appendChild(emptyMessage);
+    priceSumElement.style.display = "none"; // Hide the total price element
   } else {
+    priceSumElement.style.display = "flex"; // Show the total price element
     cartItems.forEach((item) => {
       const cartItem = document.createElement("li");
       cartItem.classList.add("cart-item");
@@ -92,6 +98,9 @@ function displayCartItems() {
       const cartItemRight = document.createElement("div");
       cartItemRight.classList.add("cart-item-right");
 
+      const quantityControls = document.createElement("div");
+      quantityControls.classList.add("quantity-controls");
+
       const minusBtn = document.createElement("button");
       minusBtn.classList.add("quantity-btn");
       minusBtn.textContent = "-";
@@ -106,22 +115,36 @@ function displayCartItems() {
       plusBtn.textContent = "+";
       plusBtn.onclick = () => updateQuantity(item.name, 1);
 
+      quantityControls.appendChild(minusBtn);
+      quantityControls.appendChild(quantityText);
+      quantityControls.appendChild(plusBtn);
+
       const removeBtn = document.createElement("button");
       removeBtn.classList.add("remove-item");
-      removeBtn.textContent = "Remove";
       removeBtn.onclick = () => removeItemFromCart(item.name);
 
-      cartItemRight.appendChild(minusBtn);
-      cartItemRight.appendChild(quantityText);
-      cartItemRight.appendChild(plusBtn);
+      const binImg = document.createElement("img");
+      binImg.src = "img/bin.png"; // Path to your bin image
+      binImg.alt = "Remove";
+      binImg.classList.add("bin-icon");
+
+      removeBtn.appendChild(binImg);
+
+      cartItemRight.appendChild(quantityControls);
       cartItemRight.appendChild(removeBtn);
 
       cartItem.appendChild(cartItemLeft);
       cartItem.appendChild(cartItemRight);
 
       cartItemsList.appendChild(cartItem);
+
+      // Calculate total price
+      totalPrice += item.price * item.quantity;
     });
   }
+
+  // Update total price element
+  totalPriceElement.textContent = `${totalPrice} SEK`;
 }
 
 // Update the quantity of an item in the cart
