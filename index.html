@@ -20,12 +20,13 @@
           <div class="right-nav">
             <li><a href="#">DOWNLOAD</a></li>
             <li>
-              <a href="#"
-                ><img
+              <a href="#" onclick="toggleCartPopup()">
+                <img
                   src="img/shopping-cart.png"
                   alt="Shopping Cart"
                   class="nav-icon"
-              /></a>
+                />
+              </a>
             </li>
             <li>
               <a href="#"
@@ -40,6 +41,24 @@
           </div>
         </ul>
       </nav>
+      <!-- Cart Popup -->
+      <div id="cart-popup" class="cart-popup">
+        <div class="cart-content">
+          <h2>Shopping Cart</h2>
+          <ul id="cart-items">
+            <!-- Cart items will be dynamically added here by JavaScript -->
+          </ul>
+          <div class="cart-buttons">
+            <button class="checkout-button">Checkout</button>
+            <button
+              class="continue-shopping-button"
+              onclick="continueShopping()"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="banner-container">
         <img
           src="img/searchbar-background.jpg"
@@ -70,13 +89,25 @@
         <div class="game-item">
           <img src="img/game-last-of-us.jpg" alt="The Last of Us II" />
           <p class="price">799 SEK</p>
-          <button class="buy-button" onclick="addToCart()">BUY NOW</button>
+          <button
+            class="buy-button"
+            onclick="addToCart('The Last of Us II', '799 SEK', 'img/game-last-of-us.jpg')"
+          >
+            BUY NOW
+          </button>
         </div>
+
         <div class="game-item">
           <img src="img/game-forma1.jpg" alt="Formula 1" />
           <p class="price">499 SEK</p>
-          <button class="buy-button" onclick="addToCart()">BUY NOW</button>
+          <button
+            class="buy-button"
+            onclick="addToCart('Formula 1', '499 SEK', 'img/game-forma1.jpg')"
+          >
+            BUY NOW
+          </button>
         </div>
+
         <div class="game-item">
           <a href="detailed-page.html">
             <img
@@ -86,17 +117,34 @@
             />
           </a>
           <p class="price">699 SEK</p>
-          <button class="buy-button" onclick="addToCart()">BUY NOW</button>
+          <button
+            class="buy-button"
+            onclick="addToCart('Detroit: Become Human', '699 SEK', 'img/game-detroit.jpg')"
+          >
+            BUY NOW
+          </button>
         </div>
+
         <div class="game-item">
           <img src="img/game-hogwarts.jpg" alt="Hogwarts Legacy" />
           <p class="price">1199 SEK</p>
-          <button class="buy-button" onclick="addToCart()">BUY NOW</button>
+          <button
+            class="buy-button"
+            onclick="addToCart('Hogwarts Legacy', '1199 SEK', 'img/game-hogwarts.jpg')"
+          >
+            BUY NOW
+          </button>
         </div>
+
         <div class="game-item">
           <img src="img/game-quarry.jpg" alt="The Quarry" />
           <p class="price">499 SEK</p>
-          <button class="buy-button" onclick="addToCart()">BUY NOW</button>
+          <button
+            class="buy-button"
+            onclick="addToCart('The Quarry', '499 SEK', 'img/game-quarry.jpg')"
+          >
+            BUY NOW
+          </button>
         </div>
       </div>
 
@@ -144,5 +192,7 @@
         <a href="https://discord.com" target="_blank">Discord</a>
       </p>
     </footer>
+
+    <script src="js/cart.js"></script>
   </body>
 </html>
