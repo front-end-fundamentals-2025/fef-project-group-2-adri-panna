@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .close {
@@ -51,6 +52,7 @@
   padding: 0;
   margin: 0;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .cart-item {
@@ -143,12 +145,24 @@
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background-color: #111;
+  padding: 10px 0;
+}
+
+.cart-buttons a {
+  text-decoration: none; /* Remove underline from the anchor tag */
+  display: flex; /* Ensure the anchor tag is a flex container */
+  justify-content: center; /* Center the button inside the anchor tag */
+  align-items: center; /* Center the button inside the anchor tag */
+  width: 60%; /* Ensure the anchor tag takes the same width as the button */
 }
 
 .checkout-button {
   font-family: "Oswald", sans-serif;
   height: 55px;
-  width: 60%;
+  width: 100%;
   padding: 20px 40px;
   font-size: 16px;
   background-color: #00bcd4;
@@ -156,6 +170,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .checkout-button:hover {
@@ -173,6 +188,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .continue-shopping-button:hover {
