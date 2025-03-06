@@ -49,6 +49,35 @@ h2 {
   line-height: 1.5;
 }
 
+#logo a {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: rgb(194, 131, 201);
+  white-space: nowrap;
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: rgb(194, 131, 201);
+}
+
+/* Jersey font for the Respawn Store part */
+.respawn-logo {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: rgb(194, 131, 201);
+}
+
 body {
   font-family: "Oswald", serif;
   font-optical-sizing: auto;
@@ -103,12 +132,6 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
-}
-
-#logo {
-  flex-grow: 1;
-  text-align: center;
-  padding-left: 10%;
 }
 
 .right-nav {
