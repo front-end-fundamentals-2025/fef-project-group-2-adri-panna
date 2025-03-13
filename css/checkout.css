@@ -128,53 +128,132 @@ footer {
   }
 }
 
-/* Checkout Form Styling */
-.checkout-form {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+/* Checkout Container */
+.checkout-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Billing Info, Card Info, Product Summary */
+.billing-info,
+.card-info,
+.product-summary {
   background-color: #222;
+  padding: 30px; /* Increase padding */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: calc(50% - 10px); /* Make sections 50% of container width */
 }
 
-.checkout-form h1 {
+/* Product Summary */
+.product-summary {
+  padding: 30px; /* Increase padding */
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.product-summary h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 28px; /* Make title bigger */
 }
 
-.form-group {
-  margin-bottom: 15px;
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Increased space between items */
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px; /* Increased padding */
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
+.product-item img {
+  width: 70px; /* Make the images bigger */
+  height: 70px;
+  object-fit: cover;
+  margin-right: 15px; /* Increase space between image and text */
+}
+
+.product-item span {
+  display: inline-block;
+  margin-right: 15px; /* Increased margin between product name/price */
+  font-size: 18px; /* Make product text bigger */
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
+  margin-top: 30px; /* Increase spacing */
+  font-size: 22px; /* Make total price text larger */
 }
 
-.form-group input {
+/* Checkout Info (Billing and Card Info) */
+h2 {
+  font-size: 28px; /* Make titles larger */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+label {
+  font-size: 18px; /* Make form labels larger */
+  margin-bottom: 10px;
+  display: block;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #444;
+  padding: 15px; /* Increase padding for form inputs */
+  font-size: 18px; /* Increase font size for inputs */
+  margin-bottom: 20px; /* Increase space between fields */
+  border: 2px solid #444;
   border-radius: 5px;
   background-color: #333;
   color: #fff;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  border-color: #00bcd4;
+  outline: none;
+}
+
+/* Checkout Button */
+.checkout-button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
 .checkout-button {
   width: 100%;
-  padding: 15px;
+  padding: 18px; /* Increase button size */
   background-color: #00bcd4;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px; /* Increase button font size */
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .checkout-button:hover {
   background-color: #0097a7;
+}
+
+@media (max-width: 768px) {
+  .billing-info,
+  .card-info {
+    width: 100%; /* Stack sections on smaller screens */
+  }
 }
