@@ -4,11 +4,10 @@
   box-sizing: border-box;
   color: #fff;
 }
-
 h1 {
   font-size: 60px;
   color: #ffffff;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 
@@ -90,6 +89,13 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.navbar ul li a:hover {
+  transform: scale(1.1); /* Slightly enlarges the item */
 }
 
 .right-nav {
@@ -255,7 +261,7 @@ main {
 }
 
 .popular-container .buy-button:hover {
-  background-color: #ff0000;
+  background-color: #ff00e1;
 }
 
 /* Free games */
@@ -302,7 +308,7 @@ main {
 }
 
 .free-container .buy-button:hover {
-  background-color: #ff0000;
+  background-color: #ff00e1;
 }
 
 .bottom-navbar ul {
@@ -365,7 +371,7 @@ main {
 }
 
 .popular-container .buy-button:hover {
-  background-color: #ff0000;
+  background-color: #ff00e1;
 }
 
 /* Free games */
@@ -415,7 +421,7 @@ main {
 }
 
 .free-container .buy-button:hover {
-  background-color: #ff0000;
+  background-color: #ff00e1;
 }
 
 /* Footer Styling */
